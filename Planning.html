@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynasty Defense Alarm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-container label {
+            margin: 10px 0 5px;
+        }
+        .form-container input, .form-container button {
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dynasty Defense Alarm System</h1>
+    </header>
+    <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#setup-password">Setup Password</a>
+        <a href="#sensors">Sensors</a>
+        <a href="#events">Events</a>
+    </nav>
+    <main>
+        <!-- Dashboard Section -->
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <p>Welcome to the Dynasty Defense Alarm System. Use the navigation to manage your alarm system.</p>
+        </section>
+
+        <!-- Setup Password Section -->
+        <section id="setup-password">
+            <h2>Setup Password</h2>
+            <div class="form-container">
+                <form>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+
+                    <button type="submit">Submit</button>
+                    <!-- Error Message Example -->
+                    <p class="error">Passwords do not match.</p>
+                </form>
+            </div>
+        </section>
+
+        <!-- Sensors Section -->
+        <section id="sensors">
+            <h2>Sensors</h2>
+            <div class="form-container">
+                <form>
+                    <label for="sensor-number">Sensor Number:</label>
+                    <input type="text" id="sensor-number" name="sensor-number" placeholder="Enter sensor number" required>
+
+                    <label for="sensor-type">Sensor Type:</label>
+                    <input type="text" id="sensor-type" name="sensor-type" placeholder="Enter sensor type" required>
+
+                    <label for="delay-time">Delay Time (seconds):</label>
+                    <input type="number" id="delay-time" name="delay-time" placeholder="Enter delay time" required>
+
+                    <button type="submit">Add Sensor</button>
+                </form>
+            </div>
+            <h3>Existing Sensors</h3>
+            <ul>
+                <li>Sensor 1 (Fire, Delay: 10s)</li>
+                <li>Sensor 2 (Smoke, Delay: 5s)</li>
+                <li>Sensor 3 (Heat, Delay: 15s)</li>
+            </ul>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events">
+            <h2>Events</h2>
+            <div class="form-containe
